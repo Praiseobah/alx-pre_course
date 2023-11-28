@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+# Match "School"
+
+puts ARGV[0].scan(/School/).join
+
+  #!/usr/bin/env ruby
+# Match "hbttn, hbtttn, hbttttn, hbtttttn"
+
+puts ARGV[0].scan(/hbt{2,5}n/).join
+
+  #!/usr/bin/env ruby
+# Match "hbtn, htn" not hbbtn
+
+puts ARGV[0].scan(/hb?tn/).join
+
+  #!/usr/bin/env ruby
+# Match "hbtn, hbttn, hbtttn, hbttttn"
+
+puts ARGV[0].scan(/hbt+n/).join
+
+  #!/usr/bin/env ruby
+# Match "hbn hbtn hbttn hbtttn hbtttn not hbon"
+
+puts ARGV[0].scan(/hbt*n/).join
+
+  #!/usr/bin/env ruby
+# Must start h and end n with any character in btw
+
+puts ARGV[0].scan(/h.n/).join
+
+  #!/usr/bin/env ruby
+# Match a 10 digit phone number 415736483448 without any dash
+
+puts ARGV[0].scan(/^[0-9]{10}$/).join
+
+  #!/usr/bin/env ruby
+# All expressions must be in capital letter
+
+Each file in this repo holdds code that illustrates an essential concept of programmiing, specific to regular expressions.
+
+puts ARGV[0].scan(/A-Z/).join
